@@ -1,0 +1,11 @@
+(define (cube-iter guess old-guess x)
+  (if (good-enough? guess old-guess)
+      guess
+      (cube-iter (improve guess x) guess x)))
+(define (good-enough? guess old-guess)
+  (< (abs (- guess old-guess))
+     (* guess 0.0001)))
+(define (improve guess x)
+  (/ (+ (/ x (* guess guess))(* 2 guess)) 3))
+(define (cube-root x)
+  (cube-iter 1.0 2.0 x))
