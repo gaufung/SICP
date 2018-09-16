@@ -6,3 +6,4 @@
 *.scm#*
 .#*.scm
 .ipynb_checkpoints/
+.DS_Store
