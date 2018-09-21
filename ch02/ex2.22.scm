@@ -3,6 +3,6 @@
     (if (null? things)
 	answer
 	(iter (cdr things)
-	      (cons (* (car things) (car things))
-		    answer))))
+	      (cons answer
+		    (* (car things) (car things))))))
   (iter items '()))

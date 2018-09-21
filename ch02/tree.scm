@@ -7,5 +7,5 @@
   (cond ((null? tree) 0)
 	((not (pair? tree)) 1)
 	(else (+ (count-leave (car x))
-		 (count-leave (cdr x))))0))
+		 (count-leave (cdr x))))))
 
