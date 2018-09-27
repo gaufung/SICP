@@ -1,0 +1,8 @@
+(define (make-from-mag-ang r a)
+  (define (dispatch op)
+    (cond ((eq? op 'real-part) (cos r a))
+	  ((eq? op 'imag-part) (sin r a))
+	  ((eq? op 'magnitude) r)
+	  ((eq? op 'angle) a)
+	  (else (error "Unkown op: MAKE-FROM-MAG-ANG" op))))
+  dispatch)
